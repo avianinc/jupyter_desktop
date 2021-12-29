@@ -18,8 +18,7 @@ RUN apt-get -y upgrade
 
 # EPOSE 3389 for xrdp
 # or ubuntu-desktop
-RUN snap install novnc
-RUN apt-get install -y --no-install-recommends ubuntu-desktop xrdp
+RUN apt-get install -y --no-install-recommends ubuntu-desktop xrdp novnc
 
 ## Clean up a bit to keep the image small
 RUN apt-get clean
