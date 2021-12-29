@@ -27,7 +27,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: avianinc/jupyter_dev
+          images: avianinc/jupyter_desktop
 
       - name: Build and push
         uses: docker/build-push-action@v2

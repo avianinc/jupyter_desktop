@@ -18,7 +18,7 @@ RUN apt-get -y upgrade
 
 # EPOSE 3389 for xrdp
 # or ubuntu-desktop
-RUN apt-get install -y --no-install-recommends ubuntu-desktop xrdp novnc
+RUN apt-get install -y --no-install-recommends ubuntu-desktop xrdp novnc websockify
 
 ## Clean up a bit to keep the image small
 RUN apt-get clean
@@ -76,6 +76,7 @@ RUN cd /home/ubuntu
 # Setup Jupyterlab server and run
 EXPOSE 8888
 EXPOSE 3389
+EXPOSE 6901
 
 CMD ["jupyter", "lab", "--ip='*'", "--port=8888", "--no-browser", "--allow-root"]
 
